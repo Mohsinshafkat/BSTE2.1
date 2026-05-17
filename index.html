@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Result Intimation</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #c5d5d0;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      width: 100%;
+      padding: 12px 6px 30px;
+    }
+
+    /* TITLES */
+    .title1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 13px;
+      color: #000;
+      margin-bottom: 3px;
+    }
+    .title2 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 13px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    /* INFO TABLE */
+    .info-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .info-table {
+      width: 92%;
+      border-collapse: collapse;
+      border: 1.5px solid #555;
+    }
+    .info-table td {
+      border: 1px solid #555;
+      padding: 5px 8px;
+      font-size: 11.5px;
+      background: #fff;
+      vertical-align: middle;
+    }
+    .info-table td:first-child {
+      font-weight: bold;
+      width: 52%;
+      color: #000;
+    }
+
+    /* MARKS TABLE - fixed layout to fit screen */
+    .marks-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .marks-table thead th {
+      background-color: #2d6b5a;
+      color: #fff;
+      font-weight: bold;
+      font-size: 8px;
+      padding: 6px 1px;
+      text-align: center;
+      white-space: normal;
+      word-break: break-word;
+      line-height: 1.2;
+    }
+    .marks-table thead th:first-child {
+      text-align: left;
+      padding-left: 4px;
+      width: 23%;
+    }
+    .marks-table thead th:nth-child(2) { width: 11%; }
+    .marks-table thead th:nth-child(3) { width: 11%; }
+    .marks-table thead th:nth-child(4) { width: 11%; }
+    .marks-table thead th:nth-child(5) { width: 9%; }
+    .marks-table thead th:nth-child(6) { width: 13%; }
+    .marks-table thead th:nth-child(7) { width: 9%; }
+    .marks-table thead th:nth-child(8) { width: 13%; }
+
+    .marks-table tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .marks-table tbody td {
+      background: #fff;
+      color: #666;
+      font-size: 10px;
+      padding: 6px 1px;
+      text-align: center;
+      border: none;
+      word-break: break-word;
+    }
+    .marks-table tbody td:first-child {
+      text-align: left;
+      padding-left: 4px;
+      font-weight: bold;
+      color: #222;
+      font-size: 9.5px;
+      word-break: break-word;
+    }
+
+    .marks-table tfoot td {
+      background-color: #2d6b5a;
+      color: #fff;
+      font-size: 10px;
+      padding: 7px 1px;
+      text-align: center;
+      border: none;
+    }
+    .marks-table tfoot td.gt-label {
+      text-align: right;
+      padding-right: 4px;
+      color: #ccc;
+      font-size: 10px;
+    }
+    .marks-table tfoot td.gt-bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="title1">BOARD OF INTERMEDIATE &amp; SECONDARY EDUCATION RAWALPINDI</div>
+  <div class="title2">RESULT INTIMATION</div>
+
+  <div class="info-wrap">
+    <table class="info-table">
+      <tr><td>ROLL NO</td><td>115765</td></tr>
+      <tr><td>STUDENT NAME</td><td>AMEER MAVIA</td></tr>
+      <tr><td>STUDENT TYPE</td><td>REGULAR</td></tr>
+      <tr><td>GRAND TOTAL</td><td>1047</td></tr>
+      <tr><td>STATUS</td><td>PASS</td></tr>
+      <tr><td>FORM-ID (FOR OFFICE USE ONLY)</td><td>078541</td></tr>
+    </table>
+  </div>
+
+  <table class="marks-table">
+    <thead>
+      <tr>
+        <th>SUBJECT</th>
+        <th>THEORY-I</th>
+        <th>THEORY-II</th>
+        <th>PRACTICAL</th>
+        <th>TOTAL</th>
+        <th>PERCENTILE</th>
+        <th>GRADE</th>
+        <th>REMARKS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ENGLISH</td><td>82</td><td>84</td><td>0</td><td>166</td><td>83%</td><td>B+</td><td>Pass</td></tr>
+      <tr><td>URDU</td><td>87</td><td>89</td><td>0</td><td>176</td><td>88%</td><td>A</td><td>Pass</td></tr>
+      <tr><td>ISLAMIC STUDY</td><td>45</td><td>0</td><td>0</td><td>45</td><td>90%</td><td>A+</td><td>Pass</td></tr>
+      <tr><td>PAKISTAN-STUDIES</td><td>43</td><td>0</td><td>0</td><td>43</td><td>86%</td><td>B+</td><td>Pass</td></tr>
+      <tr><td>TARJUMA-TUL-QURAN</td><td>34</td><td>36</td><td>21</td><td>91</td><td>91%</td><td>A+</td><td>Pass</td></tr>
+      <tr><td>MATHEMATICS</td><td>86</td><td>88</td><td>0</td><td>174</td><td>87%</td><td>A</td><td>Pass</td></tr>
+      <tr><td>PHYSICS</td><td>74</td><td>78</td><td>22</td><td>174</td><td>87%</td><td>A</td><td>Pass</td></tr>
+      <tr><td>COMPUTER SCIENCE</td><td>75</td><td>81</td><td>22</td><td>178</td><td>89%</td><td>A</td><td>Pass</td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" class="gt-label">Grand Total</td>
+        <td class="gt-bold">1047</td>
+        <td class="gt-bold">87%</td>
+        <td class="gt-bold">A</td>
+        <td class="gt-bold">Pass</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</div>
+</body>
+</html>
