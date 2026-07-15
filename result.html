@@ -271,8 +271,8 @@
 /* ══ GITHUB CONFIGURATION ══════════════════════════════════
    Replace with your actual GitHub username and repository.
 ══════════════════════════════════════════════════════════ */
-const GITHUB_USER   = "YOUR_USERNAME";
-const GITHUB_REPO   = "YOUR_REPO";
+const GITHUB_USER   = "Mohsinshafkat";
+const GITHUB_REPO   = "BSTE2.1";
 const GITHUB_BRANCH = "main";
 function ghRaw(path){ return `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`; }
 document.querySelectorAll('.gh-logo').forEach(img => { img.src = ghRaw('logo.png'); });
@@ -318,15 +318,20 @@ document.getElementById('footerDate').textContent = today;
 /* ── QR Image from GitHub ── */
 document.getElementById('qrImg').src = ghRaw('qrcode.png');
 
-/* ── Download PDF ── */
+/* ── Download PDF — */
 async function downloadPDF(){
   const btns = document.querySelectorAll('.btn-action-teal');
-  const url  = ghRaw(`students/${roll}.pdf`);
   btns.forEach(b => { b.disabled = true; b.dataset.orig = b.textContent; b.textContent = '⏳ Preparing...'; });
+  const candidates = [ ghRaw(`${roll}.pdf`), ghRaw(`${roll}.PDF`), ghRaw(`students/${roll}.pdf`), ghRaw(`students/${roll}.PDF`) ];
   try {
-    const response = await fetch(url);
-    if(!response.ok) throw new Error('Not found');
-    const blob    = await response.blob();
+    let blob = null;
+    for (const url of candidates) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) { blob = await response.blob(); break; }
+      } catch(e) { /* try next candidate */ }
+    }
+    if(!blob) throw new Error('Not found');
     const blobUrl = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = blobUrl;
