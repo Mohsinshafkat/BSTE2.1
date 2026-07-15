@@ -102,20 +102,20 @@
     <div class="result-doc-watermark">BSTE</div>
 
     <!-- Document Header -->
-<!-- Document Header -->
-<!-- Document Header -->
-<div class="result-doc-header">
-  <div class="result-doc-logo-row">
-    <div class="result-doc-logo-svg">
-      <!-- Sirf transparent PNG logo load hoga -->
-      <img class="gh-logo" src="logo.png" alt="BSTE Logo" onerror="this.onerror=null;this.src='';"/>
+<div class="result-doc-header" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+  
+  <!-- Logo aur Organization Row -->
+  <div class="result-doc-logo-row" style="display: flex; align-items: center; gap: 20px; width: 100%;">
+    <!-- Logo Container (Size yahan se 120px kiya hai) -->
+    <div class="result-doc-logo-svg" style="width: 120px; min-width: 120px; height: auto;">
+      <img class="gh-logo" src="logo.png" alt="BSTE Logo" onerror="this.onerror=null;this.src='';" style="width: 100%; height: auto; display: block; background: transparent;"/>
     </div>
+    
     <div class="result-doc-org">
-      <h3>BOARD OF SCIENCE &amp; TECHNOLOGY EDUCATION</h3>
-      <span>Official Certificate Verification Document – Pakistan</span>
+      <h3 style="margin: 0; font-size: 1.4rem;">BOARD OF SCIENCE &amp; TECHNOLOGY EDUCATION</h3>
+      <span style="font-size: 0.95rem; color: #555;">Official Certificate Verification Document – Pakistan</span>
     </div>
   </div>
-</div>
       <div class="result-doc-badge">
         <h2>Verification Result</h2>
         <span id="docDate">—</span>
@@ -180,18 +180,21 @@
       </div>
 
       <div class="result-qr-row">
-        <div class="result-qr-area">
-          <img id="qrImg"
-            src=""
-            alt="QR Code"
-            onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=76x76&data=BSTE-VERIFIED'"
-          />
-          <div class="result-qr-text">
-            <strong>Scan to Verify</strong>
-            Scan QR code to confirm<br/>
-            document authenticity online.
-          </div>
-        </div>
+  <div class="result-qr-area">
+    <!-- QR Code image ka size yahan se 150px bara kar diya hai -->
+    <img id="qrImg"
+         src=""
+         alt="QR Code"
+         onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BSTE-VERIFIED'" 
+         style="width: 150px; height: 150px; object-fit: contain; display: block; background: transparent; transition: all 0.3s ease;"
+    />
+    <div class="result-qr-text">
+      <strong>Scan to Verify</strong>
+      Scan QR code to confirm<br/>
+      document authenticity online.
+    </div>
+  </div>
+</div>
         <div class="result-stamp">✔ VERIFIED</div>
       </div>
 
